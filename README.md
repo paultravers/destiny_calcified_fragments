@@ -4,6 +4,12 @@ This python script allows you to see what calcified fragments you still need. Pl
 
 ### Usage
 ```sh
+$ ./dest_cf.py
+Usage: %s (XBL|PSN) (Username)
+
+NOTE: You may have to enclose your username in quotes if it
+contains spaces or other non-alphanumeric characters
+
 $ python dest_cf.py XBL "My Username"
 ```
 
