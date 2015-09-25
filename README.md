@@ -1,5 +1,7 @@
 # Destiny Calcified Fragments Tracker
 
+*** Note: this fragment tracker only uses grimoire so all results are per account not per character ***
+
 This python script allows you to see what calcified fragments you still need. Please help contribute to the repo if you want to add additional information to the script such as links to videos if you want to make it more accessible to people.
 
 You will need to generate an API key to use this tool correctly. Please visit [bungie.net](https://www.bungie.net/en/User/API) and update the "api_key" file with your key.
@@ -113,3 +115,5 @@ XLVIII: aiat, aiat, aiat, aiat, aiat
 -------
 Total Fragments Found: 19
 ```
+
+Special thanks to [destinyghosthunter.net](http://destinyghosthunter.net/) for putting in the work to find the correct grimoire cards for the fragments.
