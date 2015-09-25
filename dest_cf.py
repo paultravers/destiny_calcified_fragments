@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 
-import urllib, json, sys
+import urllib, json, sys, urllib2
+
+from pprint import pprint
 
 if len(sys.argv) != 3:
     print """Usage: %s (XBL|PSN) (Username)
@@ -16,29 +18,52 @@ else:
 
 playerName = sys.argv[2]
 
+f = open('api_key', 'r')
+
+api_key = f.read().rstrip()
+
+if len(api_key) == 17:
+    print "You must update your bungie.net api_key. Please read the README"
+    sys.exit(2)
+
 url3 = "http://www.bungie.net/Platform/Destiny/SearchDestinyPlayer/%s/%s/" % (system, playerName)
 
-response3 = urllib.urlopen(url3)
-
+req3 = urllib2.Request(url3)
+req3.add_header('X-API-Key', api_key)
+response3 = urllib2.urlopen(req3)
 data3 = json.loads(response3.read())
 
-playerId = data3['Response'][0]['membershipId']
+try:
+    playerId = data3['Response'][0]['membershipId']
+
+except:
+    print "There was an error, below is hopefully some useful information: "
+    print data3['Message']
+    pprint(data3)
+    sys.exit(3)
 
 url = "http://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/%s/%s/" % (system, playerId)
 
 url2 = "http://www.bungie.net/Platform/Destiny/Vanguard/Grimoire/Definition/"
 
-response = urllib.urlopen(url)
+req3 = urllib2.Request(url3)
+req3.add_header('X-API-Key', api_key)
+response3 = urllib2.urlopen(req3)
+data3 = json.loads(response3.read())
 
-response2 = urllib.urlopen(url2)
-
+req = urllib2.Request(url)
+req.add_header('X-API-Key', api_key)
+response = urllib2.urlopen(req)
 data = json.loads(response.read())
 
+req2 = urllib2.Request(url2)
+req2.add_header('X-API-Key', api_key)
+response2 = urllib2.urlopen(req2)
 grimoire_data = json.loads(response2.read())
 
 cards = data['Response']['data']['cardCollection']
 
-frags = [ 700680, 700690, 700700, 700710, 700720, 700830, 700840, 700850, 700860, 700770, 700780, 700790, 700800, 700810, 700820, 700830, 700840, 700850, 700860, 700870, 700880, 700890, 700900, 700910, 700920, 700930, 700940, 700950, 700960, 700970, 700980, 700990, 701000, 701010, 701020, 701030, 701040, 701050, 701060, 701070, 701080, 701090, 701100, 701110, 701120, 701130, 701140, 701150, 701160, 701170 ]
+frags = [ 700750 , 700680 , 700690 , 700700 , 700710 , 700720 , 700730 , 700740 , 700760 , 700770 , 700780 , 700790 , 700800 , 700810 , 700820 , 700830 , 700840 , 700850 , 700860 , 700870 , 700880 , 700890 , 700900 , 700910 , 700920 , 700930 , 700940 , 700950 , 700960 , 700970 , 700980 , 700990 , 701000 , 701010 , 701020 , 701030 , 701040 , 701050 , 701060 , 701070 , 701080 , 701090 , 701100 , 701110 , 701120 , 701130 , 701140 , 701150 , 701160 , 701170 ]
 
 frags_org = frags[:]
 
