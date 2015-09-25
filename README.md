@@ -11,10 +11,7 @@ You will need to generate an API key to use this tool correctly. Please visit [b
 $ ./dest_cf.py
 Usage: %s (XBL|PSN) (Username)
 
-NOTE: You may have to enclose your username in quotes if it
-contains spaces or other non-alphanumeric characters
-
-$ python dest_cf.py XBL "My Username"
+$ python dest_cf.py XBL My Username
 ```
 
 ### Output

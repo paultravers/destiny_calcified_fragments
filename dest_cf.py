@@ -4,19 +4,19 @@ import urllib, json, sys, urllib2
 
 from pprint import pprint
 
-if len(sys.argv) != 3:
-    print """Usage: %s (XBL|PSN) (Username)
-
-NOTE: You may have to enclose your username in quotes if it 
-contains spaces or other non-alphanumeric characters"""
-    sys.exit(1)
-
 if sys.argv[1] == 'XBL':
     system = 1
-else:
+elif sys.argv[1] == 'PSN':
     system = 2
+else:
+    print """Usage: %s (XBL|PSN) (Username)"""
+    sys.exit(1)
 
 playerName = sys.argv[2]
+
+if len(sys.argv) > 3:
+    for i in range(3,len(sys.argv)):
+        playerName = playerName + '%20' + sys.argv[i]
 
 f = open('api_key', 'r')
 
