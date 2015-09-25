@@ -2,7 +2,7 @@
 
 *** Note: this fragment tracker only uses grimoire so all results are per account not per character ***
 
-This python script allows you to see what calcified fragments you still need. Please help contribute to the repo if you want to add additional information to the script such as links to videos if you want to make it more accessible to people.
+This python script allows you to see what calcified fragments you still need as well as information on how to obtain it if possible. Please help contribute to the repo if you want to add additional information to the script such as links to videos if you want to make it more accessible to people.
 
 You will need to generate an API key to use this tool correctly. Please visit [bungie.net](https://www.bungie.net/en/User/API) and update the "api_key" file with your key.
 
@@ -18,99 +18,28 @@ $ python dest_cf.py XBL My Username
 
 ```
 -------
-XVI: The Sword Logic
--------
--------
-XVII: The Weakness Verse
--------
--------
-XVIII: Leviathan Rises
--------
--------
-XIX: Crusaders
--------
--------
-XI: Conquerors
--------
--------
-XII: Out of the Deep
--------
--------
-XIII: Into the Sky
--------
--------
-XIV: 52 and One
--------
--------
-XV: Born As Prey
--------
--------
-XVI: The Sword Logic
--------
--------
-XVII: The Weakness Verse
--------
--------
-XVIII: Leviathan Rises
--------
--------
-XIX: Crusaders
--------
--------
-XX: Hive
--------
--------
-XXII: The High War
--------
--------
-XXIII: fire without fuel
--------
--------
-XXIV: THE SCREAM
--------
--------
-XXV: Dictata ir Dakaua
--------
--------
-XXVI: star by star by star
--------
--------
-XXVII: Eat the Sky
--------
--------
-XXVIII: King of Shapes
--------
--------
-XXIX: Carved in Ruin
--------
--------
-XXXI: battle made waves
--------
--------
-XXXII: Majestic. Majestic.
--------
--------
-XXXIII: When do monsters have dreams
--------
--------
-XXXVI: Eater of Hope
+VII: The Dive
+Obtain by: https://youtu.be/PAOwpMhWVF8
 -------
 -------
 XLIII: End of Failed Timeline
+Obtain by: No information available
 -------
 -------
 XLIV:  strict proof eternal
+Obtain by: No information available
 -------
 -------
 XLV: I&#39;d shut them all in cells.
--------
--------
-XLVII: Apocalypse Refrains
+Obtain by: No information available
 -------
 -------
 XLVIII: aiat, aiat, aiat, aiat, aiat
+Obtain by: No information available
 -------
-Total Fragments Found: 19
+Total Fragments Found: 45
 ```
 
 Special thanks to [destinyghosthunter.net](http://destinyghosthunter.net/) for putting in the work to find the correct grimoire cards for the fragments.
+
+and the contributors on the [reddit thread](https://www.reddit.com/r/DestinyTheGame/comments/3lb4oo/calcified_fragments_sorted_by_location_and_videos/) for the videos on how to obtain them
